@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.console {
+    box-sizing: border-box;
+    width: min(100vw - 5px, 99vw);
+    height: 110px;
+    font-size: 13px;
+    color: yellow;
+    text-align: left;
+    background-color: black;
+    padding: max(2.5px, 0.5vw);
+    margin: max(2.5px, 0.5vw);
+}
+
+.currentdialogue {
+    margin: 1.25px;
+    font-size: 13px;
+    color: white;
+}
