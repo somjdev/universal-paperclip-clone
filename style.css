@@ -3,20 +3,51 @@ body {
     padding: 0;
 }
 
-.console {
+#console {
     box-sizing: border-box;
     width: min(100vw - 5px, 99vw);
     height: 110px;
-    font-size: 13px;
-    color: yellow;
-    text-align: left;
+
     background-color: black;
     padding: max(2.5px, 0.5vw);
     margin: max(2.5px, 0.5vw);
 }
 
-.currentdialogue {
-    margin: 1.25px;
+#topBar {
+    box-sizing: border-box;
+    width: min(100vw - 10px, 98vw);
+
+    margin: max(2.5px, 0.5vw);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#leftColoumn {
+    box-sizing: border-box;
+    width: max(15vw, 275px);
+
+    margin-left: max(2.5px, 0.5vw);
+}
+
+.log {
+    font-size: 13px;
+    color: grey;
+}
+
+.currentlog {
     font-size: 13px;
     color: white;
+}
+
+
+#businessDiv {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    display: block;
+    margin: auto;
+    margin-top: 0.05em;
+    margin-bottom: 0.2em;
 }
