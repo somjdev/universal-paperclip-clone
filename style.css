@@ -29,6 +29,10 @@ body {
     margin-left: max(2.5px, 0.5vw);
 }
 
+#autoMakerDiv {
+    display: none;
+}
+
 .log {
     font-size: 13px;
     color: grey;

@@ -4,11 +4,13 @@ let avaliableCash = 0;
 // Business
 let unsoldIncrementals = 0;
 let incrementalCost = 30;
-let sellChance = 0.69;
+let sellChance = 1;
+let sellSpeedMulti = 1;
 
 // Manufacturing
-let avaliableParts = 20;
+let avaliableParts = 1000;
 let partsCost = 14;
+let partMakeSpeedMulti = 1;
 
 const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -38,15 +40,28 @@ function updateIncrementals() {
 
 function sellIncremental() {    
     if (unsoldIncrementals > 0) {
-        unsoldIncrementals--;
-        avaliableCash += incrementalCost;
+        let toSell = Math.min(unsoldIncrementals, 10)
+        unsoldIncrementals -= toSell;
+        avaliableCash += incrementalCost * toSell;
         document.getElementById("unsoldAmount").textContent = unsoldIncrementals;
         document.getElementById("cash").textContent = avaliableCash / 100;
-        document.getElementById("avgCashPerSec").textContent = strip((incrementalCost / 100) / (sellInterval() / 1000));
+        document.getElementById("avgCashPerSec").textContent = strip(((incrementalCost * toSell) / 100) / (sellInterval() / 1000));
+        document.getElementById("amountSoldPerSec").textContent = Math.floor(toSell / (sellInterval() / 1000))
     } else {
         document.getElementById("avgCashPerSec").textContent = to2DP(0);
     }
 
+}
+
+function buyParts() {
+    if (avaliableCash >= partsCost) {
+        avaliableParts += 1000;
+        avaliableCash -= partsCost;
+        console.log("worked");
+
+        document.getElementById("avaliableParts").textContent = avaliableParts;
+        document.getElementById("cash").textContent = avaliableCash / 100;
+    }
 }
 
 function generatePartPrice() {
