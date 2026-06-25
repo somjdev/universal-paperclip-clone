@@ -32,38 +32,38 @@
         <span id="incrementals">0</span>
     </div>
     <div id="leftColoumn">
-        <button class="button">Generate Incremental</button>
+        <button class="button" onclick="updateIncrementals()">Generate Incremental</button>
         <br>
         <br>
         <div id="businessDiv">
             <b>Business</b>
             <hr>
-            Avaliable Cash: $
+            <span>Avaliable Cash: $</span>
             <span id="cash">0</span>
             <br>
-            Avg. Cash per sec: $
+            <span>Avg. Cash per sec: $</span>
             <span id="avgCashPerSec">0.00</span>
             <br>
-            Avg. Sold per sec: 
+            <span>Avg. Sold per sec:</span>
             <span id="amountSoldPerSec">0</span>
             <br>
-            Unsold Inventory
+            <span>Unsold Inventory</span>
             <span id="unsoldAmount">0</span>
             <br>
             <button>Raise</button>
             <button>Lower</button>
-            Price per: $
+            <span>Price per: $</span>
             <span id="incrementalPrice">0.30</span>
             <br>
-            Public Demand: 
+            <span>Public Demand:</span>
             <span id="demand">69%</span>
             <br>
             <br>
             <button>Marketing</button>
-            Level: 
+            <span>Level:</span>
             <span id="marketingLevel">0</span>
             <br>
-            Cost: $ 
+            <span>Cost: $</span>
             <span id="marketingCost">100</span>
             <br>
             <br>
@@ -71,13 +71,25 @@
         <div id="manufacturingDiv">
             <b>Manufacturing</b>
             <hr>
-            Incrementals per Second: 
+            <span>Incrementals per Second:</span>
             <span id="incrementalsPerSecond">0</span>
+            <br>
+            <br>
+            <button>Parts</button>
+            <span id="avaliableParts">1000</span>
+            <span>cm</span>
+            <br>
+            <span>Cost: $</span> 
+            <span id="partsCost">10</span>
+            <br>
+            <br>
+            <button>AutoMaker</button>
+            <span>0</span>
+            <br>
+            <span>Cost: $</span>
+            <span>10</span>
         </div>
     </div>
-
-
-
     <script src="index.js"></script>
 </body>
 </html>
